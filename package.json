@@ -1,0 +1,31 @@
+{
+  "name": "@intelligentplant/data-core-types",
+  "version": "1.0.0",
+  "description": "Type definitions for applications interfacing with Intelligent Plant Data Core",
+  "main": "index.js",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p ./ --outDir dist/",
+    "prepare": "shx rm -rf ./dist && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "intelligent",
+    "plant",
+    "industrial",
+    "app",
+    "store",
+    "data",
+    "core"
+  ],
+  "author": "Intelligent Plant",
+  "license": "ISC",
+  "devDependencies": {
+    "shx": "^0.3.2",
+    "tslint": "~5.11.0",
+    "typescript": "~2.9.2"
+  }
+}
