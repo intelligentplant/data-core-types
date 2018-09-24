@@ -5,3 +5,7 @@ export interface HistoricalTagValues {
     DisplayType: string;
     Values: TagValue[];
 }
+
+export type HistoricalTagValuesDictionary = { [tagName: string]: HistoricalTagValues };
+
+export type HistoricalTagValuesDataSourceDictionary = { [dsn: string]: HistoricalTagValuesDictionary };

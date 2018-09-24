@@ -9,3 +9,7 @@ export interface TagValue {
     Error: string;
     HasError: boolean;
 }
+
+export type SnapshotTagValuesDictionary = { [tagName: string]: TagValue };
+
+export type SnapshotTagValuesDataSourceDictionary = { [dsn: string]: SnapshotTagValuesDictionary };
