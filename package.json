@@ -12,6 +12,10 @@
     "prepare": "shx rm -rf ./dist && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intelligentplant/data-core-types.git"
+  },
   "keywords": [
     "intelligent",
     "plant",
@@ -23,6 +27,10 @@
   ],
   "author": "Intelligent Plant",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/intelligentplant/data-core-types/issues"
+  },
+  "homepage": "https://github.com/intelligentplant/data-core-types#readme",
   "devDependencies": {
     "shx": "^0.3.2",
     "tslint": "~5.11.0",
