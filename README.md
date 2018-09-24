@@ -4,3 +4,4 @@ A library containing types used by the [Intelligent Plant Industrial App Store](
 
 ### Installation
 
+`npm install @intelligentplant/data-core-types`
