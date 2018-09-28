@@ -2,7 +2,7 @@
   "name": "@intelligentplant/data-core-types",
   "version": "1.0.4",
   "description": "Type definitions for applications interfacing with Intelligent Plant Data Core",
-  "main": "index.js",
+  "main": "dist/index.js",
   "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
