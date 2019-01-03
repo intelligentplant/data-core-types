@@ -1,4 +1,6 @@
-export interface ComponentName {
-    DisplayName: string;
-    QualifiedName: string;
+export class ComponentName {
+    constructor(
+        public DisplayName: string,
+        public QualifiedName: string
+    ) { }
 }

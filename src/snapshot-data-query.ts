@@ -1,3 +1,3 @@
-export interface SnapshotDataQuery {
-    tags: { [dsn: string]: string[] };
+export class SnapshotDataQuery {
+    constructor(public tags: { [dsn: string]: string[] }) { }
 }

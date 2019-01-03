@@ -1,9 +1,11 @@
 import { TagValue } from "./tag-value";
 
-export interface HistoricalTagValues {
-    TagName: string;
-    DisplayType: string;
-    Values: TagValue[];
+export class HistoricalTagValues {
+    constructor(
+        public TagName: string,
+        public DisplayType: string,
+        public Values: TagValue[]
+    ) { }
 }
 
 export type HistoricalTagValuesDictionary = { [tagName: string]: HistoricalTagValues };

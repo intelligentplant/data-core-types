@@ -1,14 +1,16 @@
 import { EventMessageProperty } from "./event-message-property";
 
-export interface EventMessage {
-    ID: string;
-    SourceSystem: string;
-    Source: string;
-    UtcEventTime: Date;
-    Category: string;
-    Name: string;
-    Seq: number;
-    Message: string;
-    Properties: EventMessageProperty[];
-    RawMessage: string;
+export class EventMessage {
+    constructor(
+        public ID: string,
+        public SourceSystem: string,
+        public Source: string,
+        public UtcEventTime: Date,
+        public Catcgory: string,
+        public Name: string,
+        public Seq: string,
+        public Message: string,
+        public Properties: EventMessageProperty[],
+        public RawMessage: string
+    ) { }
 }

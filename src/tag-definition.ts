@@ -1,5 +1,7 @@
-export interface TagDefinition {
-    Name: string;
-    Description: string;
-    UnitOfMeasure: string;
+export class TagDefinition {
+    constructor(
+        public Name: string,
+        public Description: string,
+        public UnitOfMeasure: string
+    ) { }
 }

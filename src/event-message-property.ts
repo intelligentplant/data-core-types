@@ -1,4 +1,6 @@
-export interface EventMessageProperty {
-    Name: string;
-    Value: any;
+export class EventMessageProperty {
+    constructor(
+        public Name: string,
+        public Value: any
+    ) { }
 }

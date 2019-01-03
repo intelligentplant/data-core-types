@@ -1,25 +1,56 @@
-interface HistoricalDataQuery {
-    tags: { [dsn: string]: string[] }
+class HistoricalDataQuery {
+    constructor(public tags: { [dsn: string]: string[] }) { }
 } 
 
-interface HistoricalDataQueryWithTimeRange extends HistoricalDataQuery {
-    startTime: string | Date;
-    endTime: string | Date;
+class HistoricalDataQueryWithTimeRange extends HistoricalDataQuery {
+    constructor(
+        tags: { [dsn: string]: string[] }, 
+        public startTime: string | Date, 
+        public endTime: string | Date
+    ) {
+        super(tags);
+    }
 }
 
-export interface RawDataQuery extends HistoricalDataQueryWithTimeRange {
-    pointCount: number;
+export class RawDataQuery extends HistoricalDataQueryWithTimeRange {
+    constructor(
+        tags: { [dsn: string]: string[] }, 
+        startTime: string | Date, 
+        endTime: string | Date,
+        public pointCount: number
+    ) {
+        super(tags, startTime, endTime);
+    }
 }
 
-export interface PlotDataQuery extends HistoricalDataQueryWithTimeRange {
-    intervals: number;
+export class PlotDataQuery extends HistoricalDataQueryWithTimeRange {
+    constructor(
+        tags: { [dsn: string]: string[] }, 
+        startTime: string | Date, 
+        endTime: string | Date,
+        public intervals: number
+    ) {
+        super(tags, startTime, endTime);
+    }
 }
 
-export interface ProcessedDataQuery extends HistoricalDataQueryWithTimeRange {
-    dataFunction: string;
-    sampleInterval: string;
+export class ProcessedDataQuery extends HistoricalDataQueryWithTimeRange {
+    constructor(
+        tags: { [dsn: string]: string[] }, 
+        startTime: string | Date, 
+        endTime: string | Date,
+        public dataFunction: string,
+        public sampleInterval: string
+    ) {
+        super(tags, startTime, endTime);
+    }
 }
 
-export interface ValuesAtTimesDataQuery extends HistoricalDataQuery {
-    utcSampleTimes: Date[];
+export class ValuesAtTimesDataQuery extends HistoricalDataQuery {
+    constructor(
+        tags: { [dsn: string]: string[] }, 
+        public utcSampleTimes: Date[]
+    ) {
+        super(tags);
+    }
 }
